@@ -13,10 +13,10 @@ const schema = {
       errorMessage: "category validation failed , type must be  string ",
     },
   },
-  cover: {
+  poster: {
     in: ["body"],
     isString: {
-      errorMessage: "cover validation failed , type must be string",
+      errorMessage: "poster validation failed , type must be string",
     },
   },
 };

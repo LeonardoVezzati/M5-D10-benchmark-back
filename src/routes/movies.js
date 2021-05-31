@@ -262,7 +262,7 @@ router.put("/:id", async (req, res, next) => {
 );
  */
 
-router.put("/:id/cover", parseFile.single("cover"), async (req, res, next) => {
+router.put("/:id/poster", parseFile.single("poster"), async (req, res, next) => {
   try {
     const fileAsBuffer = fs.readFileSync(moviesFilePath);
 
@@ -281,7 +281,7 @@ router.put("/:id/cover", parseFile.single("cover"), async (req, res, next) => {
     const previousMovieData = fileAsJSONArray[movieIndex];
     const changedMovie = {
       ...previousMovieData,
-      cover: req.file.path,
+      poster: req.file.path,
       updatedAt: new Date(),
       id: req.params.id,
     };
